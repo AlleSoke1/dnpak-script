@@ -1,0 +1,19 @@
+IDString "EyedentityGames Packing File 0.1" 
+goto 0x104
+get Files long
+get noffset long
+goto noffset
+for i = 0 < FILES
+getdstring NAME 0x100
+get ZSIZE long
+get SIZE long
+get ZSIZE1 long
+get OFFSET long
+get UNK3 long
+getdstring NULL1 0x28
+if SIZE == 0
+print "skip %NAME%"
+else
+clog NAME OFFSET ZSIZE SIZE
+endif
+next i  
