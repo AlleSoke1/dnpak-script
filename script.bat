@@ -26,24 +26,28 @@ if /i %mode%==3 goto all
 FOR %%A IN (0 1 2 3 4 5 6 7 8 9) DO quickbms.exe -Y -f "*.dnt" quickbms.txt Resource0%%A.pak %outputdir%
 quickbms.exe -Y -f "*.dnt" quickbms.txt Resource10.pak %outputdir%
 quickbms.exe -Y -f "*.dnt" quickbms.txt Resource11.pak %outputdir%
+quickbms.exe -Y -f "*.dnt" quickbms.txt Resource12.pak %outputdir%
 goto finish
 
 :only_script
 FOR %%A IN (0 1 2 3 4 5 6 7 8 9) DO quickbms.exe -Y -f "*.xml;*.lua" quickbms.txt Resource0%%A.pak %outputdir%
 quickbms.exe -Y -f "*.xml;*.lua" quickbms.txt Resource10.pak %outputdir%
 quickbms.exe -Y -f "*.xml;*.lua" quickbms.txt Resource11.pak %outputdir%
+quickbms.exe -Y -f "*.xml;*.lua" quickbms.txt Resource12.pak %outputdir%
 goto finish
 
 :all_noaudiovideo
 FOR %%A IN (0 1 2 3 4 5 6 7 8 9) DO quickbms.exe -Y -f "!*.ogg;!*.avi;!*.dds;!*.mp3;!*.wav" quickbms.txt Resource0%%A.pak %outputdir%
 quickbms.exe -Y -f "!*.ogg;!*.avi;!*.dds;!*.mp3;!*.wav" quickbms.txt Resource10.pak %outputdir%
 quickbms.exe -Y -f "!*.ogg;!*.avi;!*.dds;!*.mp3;!*.wav" quickbms.txt Resource11.pak %outputdir%
+quickbms.exe -Y -f "!*.ogg;!*.avi;!*.dds;!*.mp3;!*.wav" quickbms.txt Resource12.pak %outputdir%
 goto finish
 
 :all
 FOR %%A IN (0 1 2 3 4 5 6 7 8 9) DO quickbms.exe -Y quickbms.txt Resource0%%A.pak %outputdir%
 quickbms.exe -Y quickbms.txt Resource10.pak %outputdir%
 quickbms.exe -Y quickbms.txt Resource11.pak %outputdir%
+quickbms.exe -Y quickbms.txt Resource12.pak %outputdir%
 goto finish
 
 :finish
